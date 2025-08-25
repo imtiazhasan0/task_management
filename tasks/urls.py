@@ -1,10 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from tasks.views import show_tasks
+from tasks.views import manager_dashboard,user_dashboard
  
-
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path ('show_tasks/', show_tasks)
+    path('manager-dashboard/', manager_dashboard),
+    path('user-dashboard/', user_dashboard),
 ]
