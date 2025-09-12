@@ -42,3 +42,9 @@ class TaskModelForm(forms.ModelForm):
             'due_date': forms.SelectDateWidget(),
             'assigned_to': forms.CheckboxSelectMultiple(),
         }
+
+class TaskDetailsModelForm(forms.ModelForm):
+    class Meta:
+        model = taskdetails
+        fields = ['priority', 'notes']
+        
