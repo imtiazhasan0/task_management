@@ -85,7 +85,8 @@ def update_task(request ,id):
             messages.success(request, "Task  successfully!")
             return redirect('update-task',id=id)
     
-    context = {'task_form': task_form, 'task_details_form': task_details_form}
+    context = {'task_form': task_form, 
+               'task_details_form': task_details_form}
     return render(request, "task_form.html", context)
 
 def delete_task(request, id):
